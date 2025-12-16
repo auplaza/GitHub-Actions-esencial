@@ -1,4 +1,4 @@
-name: .NET
+name: .NET # prueba pipeline
 
 on:
   push:
@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore src/wpm-api/WisdomPetMedicine.sln
+      run: dotnet restore 
     - name: Build
-      run: dotnet build src/wpm-api/WisdomPetMedicine.sln --no-restore
+      run: dotnet build
     - name: Test
-      run: dotnet test src/wpm-api/WisdomPetMedicine.sln --no-build --verbosity normal
+      run: dotnet test
